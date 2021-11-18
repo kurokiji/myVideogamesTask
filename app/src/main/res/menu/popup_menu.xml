@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/shortByRating"
+            android:title="Por puntuacion"
+        />
+    <item android:id="@+id/sortByInvertedRating"
+        android:title="Por puntuacion inversa"
+        />
+    <item android:id="@+id/sortByName"
+            android:title="Por nombre"
+        />
+    <item android:id="@+id/sortByPlatform"
+            android:title="Por plataforma"
+        />
+
+</menu>

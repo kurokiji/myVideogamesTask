@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">My Videogames</string>
+    <string name="title_activity_add">Add Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_new_game">NewGameActivity</string>
+
+    <!-- Strings usados por el spinner de plataformas -->
+    <string name="platform_prompt">Elige la platoforma</string>
+    <string-array name="platform_array">
+        <item>PC</item>
+        <item>Mac OS</item>
+        <item>Android</item>
+        <item>iOS</item>
+        <item>PS4</item>
+        <item>PS5</item>
+        <item>Xbox One</item>
+        <item>Xbox Series X</item>
+    </string-array>
+
+    <!-- Strings usados por el spinner de formatos -->
+    <string-array name="format_array">
+        <item> </item>
+        <item>Físico</item>
+        <item>Digital</item>
+        <item>No lo tengo</item>
+    </string-array>
+
+    <!-- Strings usados por la actividad de adicion -->
+    <string name="load_image">Cargar Imagen</string>
+    <string name="name_hint">Nombre del juego</string>
+    <string name="platform_title">Plataforma</string>
+    <string name="format_title">Formato</string>
+    <string name="progress_title">Progreso</string>
+    <string name="save_data">Guardar datos</string>
+
+    <!-- Strings usados por la barra de la app -->
+    <string name="app_title">Mis Videojuegos</string>
+</resources>

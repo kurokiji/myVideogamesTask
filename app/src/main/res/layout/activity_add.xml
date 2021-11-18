@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_yellow"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageSquare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/videoGameName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:background="@drawable/videogame_background">
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ratingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/empty_cover" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/coverImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/loadImage"
+            android:scaleX="0.65"
+            android:scaleY="0.65" />
+
+        <Button
+            android:id="@+id/loadImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/load_image"
+            android:onClick="loadImage"
+            android:backgroundTint="@color/my_yellow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <EditText
+        android:id="@+id/videoGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageSquare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        android:ems="15"
+        android:inputType="text|textCapWords"
+        android:hint="@string/name_hint"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/platformText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/videoGameName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/formatText"
+        app:layout_constraintBottom_toTopOf="@id/platformSpinner"
+        android:layout_marginLeft="50dp"
+        android:text="@string/platform_title"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Spinner
+        android:id="@+id/platformSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/platformText"
+        app:layout_constraintBottom_toTopOf="@id/progressText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/formatSpinner"
+        android:layout_marginLeft="50dp"
+        android:entries="@array/platform_array"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/formatText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/videoGameName"
+        app:layout_constraintStart_toEndOf="@id/platformText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/formatSpinner"
+        android:layout_marginRight="50dp"
+        android:text="@string/format_title"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/formatSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/formatText"
+        app:layout_constraintBottom_toTopOf="@id/progressText"
+        app:layout_constraintStart_toEndOf="@id/platformSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="50dp"
+        android:entries="@array/format_array"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/platformSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progressSeek"
+        android:text="@string/progress_title"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <SeekBar
+        android:id="@+id/progressSeek"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/progressText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        android:layout_marginBottom="15dp"
+        android:progressBackgroundTint="@color/white"
+        android:thumbTint="@color/white"
+        />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/progressSeek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/save_data"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/my_yellow"
+        android:onClick="saveData"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
